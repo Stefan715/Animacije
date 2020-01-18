@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex ;
+    background-color: #050210; 
+    justify-content: center;   
+    
+}
+
+#circle {
+    position: relative;
+    width: 500px;
+    height:500px;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border-radius: 50%;
+    top: 150px;  
+}
+
+#circle span:last-child{
+    content: ''; 
+    border-radius: 50%;
+    position: absolute;
+    background-color: #050210 ;
+    top: 35px;
+    bottom: 35px;
+    right: 35px;
+    left: 35px;
+    
+}
+
+#circle span:first-child{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border-radius: 50%;
+    filter: blur(50px);
+    animation: my-animation 1s linear infinite;
+
+}
+
+@keyframes my-animation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#pulse{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+   
+    border-radius: 50%;
+    top:215px;
+    left: 215px;
+    animation: animation 2s linear infinite;
+}
+@keyframes animation {
+    0% 
+    {
+        box-shadow:0 0 0 0 rgba(150, 112, 150, 0.5) ;
+    }
+    33% 
+    {
+        box-shadow:0 0 0 80px rgba(150, 112, 150, 0.3) ;
+    }
+    66% 
+    {
+        box-shadow:0 0 0 225px rgba(199, 145, 199, 0.1 ) ;
+    }
+    100% 
+    {
+        box-shadow:0 0 0 250 rgba(150, 112, 150, 0) ;
+    }
+}
+
+{}
+{}
+{}
+{}
+
